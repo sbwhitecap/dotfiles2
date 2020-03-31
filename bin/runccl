@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "_$1" = "_" ]; then
+  printf 'runccl: not given an file\n' >&2
+  exit 1
+fi
+
+exec ccl --batch --eval '(progn (load "'$1'") (ccl::quit))'

@@ -1,0 +1,4 @@
+# echo 'source $HOME/dotfiles2/bashrc.post' >> $HOME/.bashrc
+
+source $HOME/dotfiles2/aliases
+

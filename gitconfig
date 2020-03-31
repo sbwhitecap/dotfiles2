@@ -1,0 +1,14 @@
+[include]
+	path = ~/.gitconfig.local
+[pull]
+	ff = only
+[merge]
+	ff = false
+[color]
+	ui = auto
+[core]
+	autocrlf = input
+	editor = nvim
+
+[commit]
+	verbose = true

@@ -1,0 +1,5 @@
+# echo 'source $HOME/dotfiles2/bash_profile.post' >> $HOME/.bash_profile
+
+PATH=$PATH:$HOME/bin
+
+export PATH
