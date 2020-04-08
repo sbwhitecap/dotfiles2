@@ -21,6 +21,7 @@ ln -s -f -n -v $DOTFILES/config/common-lisp         $CONFIG/common-lisp
 ln -s -f -n -v $DOTFILES/ccl-init.lisp              $HOME/.ccl-init.lisp
 ln -s -f -n -v $DOTFILES/screenrc                   $HOME/.screenrc
 ln -s -f -n -v $DOTFILES/gdbinit                    $HOME/.gdbinit
+[ ! -d $HOME/.ssh ] && mkdir $HOME/.ssh
 ln -s -f -n -v $DOTFILES/ssh/config                 $HOME/.ssh/config
 
 [ ! -d $HOME/bin ] && mkdir $HOME/bin
