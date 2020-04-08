@@ -1,3 +1,7 @@
+window:
+  dimensions:
+    columns: 85
+    lines: 48
 font:
   size: 16
 shell:
