@@ -55,3 +55,6 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'l04m33/vlime'
 rtp = 'vim/'
+
+[[plugins]]
+repo = 'bhurlow/vim-parinfer'

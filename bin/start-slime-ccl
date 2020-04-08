@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ccl --load $HOME/.cache/dein/repos/github.com/l04m33/vlime/lisp/start-vlime.lisp
