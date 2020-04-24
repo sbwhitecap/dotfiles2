@@ -7,7 +7,3 @@ alias rrr="rlwrap ros run"
 alias sbql="sbcl --noinform --quit --load"
 alias sbcl="sbcl --noinform"
 alias rlcl="rlwrap sbcl --noinform"
-
-alias rlccl="rlwrap ccl"
-alias ccll="ccl --load"
-

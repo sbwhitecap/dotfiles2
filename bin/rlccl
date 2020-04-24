@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# CTRL+^: Use an external editor to edit the current input.
+export RLWRAP_EDITOR='nvim -c "set filetype=lisp"'
+rlwrap -c -q '"' -b "'"'(){}[].,#@;|`"' -m ccl "$@"
