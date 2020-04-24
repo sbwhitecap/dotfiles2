@@ -16,7 +16,6 @@ ln -s -f -n -v $DOTFILES/config/user-dirs.locale    $CONFIG/user-dirs.locale
 ln -s -f -n -v $DOTFILES/config/alacritty           $CONFIG/alacritty
 [ ! -d $CONFIG/nvim ] && mkdir $CONFIG/nvim
 ln -s -f -n -v $DOTFILES/config/nvim/init.vim       $CONFIG/nvim/init.vim
-ln -s -f -n -v $DOTFILES/config/nvim/dein.toml      $CONFIG/nvim/dein.toml
 ln -s -f -n -v $DOTFILES/config/common-lisp         $CONFIG/common-lisp
 ln -s -f -n -v $DOTFILES/ccl-init.lisp              $HOME/.ccl-init.lisp
 ln -s -f -n -v $DOTFILES/screenrc                   $HOME/.screenrc
@@ -29,3 +28,6 @@ ln -s -f -n -v $DOTFILES/bin/*                      $HOME/bin
 
 echo "source $DOTFILES/bashrc.post"       >> $HOME/.bashrc
 echo "source $DOTFILES/bash_profile.post" >> $HOME/.bash_profile
+
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

@@ -1,41 +1,41 @@
-" vim: tabstop=8 expandtab shiftwidth=2 softtabstop=2
+" vim: tabstop=2 shiftwidth=2 expandtab:
 
-" https://qiita.com/kawaz/items/ee725f6214f91337b42b
+" curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
-let g:dein_dir = s:cache_home . '/dein'
-let s:dein_repo_dir = g:dein_dir . '/repos/github.com/Shougo/dein.vim'
-if !isdirectory(s:dein_repo_dir)
-  call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
-endif
+let s:plugged = s:cache_home . '/plugged'
+call plug#begin(s:plugged)
+  Plug 'vim-jp/vimdoc-ja'
+  Plug 'bronson/vim-trailing-whitespace'
 
-let &runtimepath .= ',' . s:dein_repo_dir
-let g:dein#install_log_filename = g:dein_dir . '/install.log'
+  Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
+  Plug 'lotabout/skim.vim'
 
-if dein#load_state(g:dein_dir)
-  call dein#begin(g:dein_dir)
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
 
-  " https://qiita.com/kawaz/items/ee725f6214f91337b42b
-  let s:toml = fnamemodify(expand('<sfile>'), ':h') . '/dein.toml'
-  call dein#load_toml(s:toml)
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-filetype plugin on
-filetype plugin indent on
-syntax enable
-
-if dein#check_install()
-  call dein#install()
-endif
+  Plug 'vlime/vlime', {'rtp': 'vim/'}
+    let g:vlime_leader = ','
+    let g:vlime_cl_impl = 'ccl'
+    let g:vlime_compiler_policy = {'DEBUG': 3, 'SPEED': 0}
+  Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
+call plug#end()
 
 " https://postd.cc/how-to-boost-your-vim-productivity/
 let mapleader = "\<Space>"
-nnoremap <Leader>w :w<CR>
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
+nnoremap <CR> G
+nnoremap <BS> gg
+noremap gV `[v`]
+
+" fzf.vim / skim.vim
+nnoremap <Leader>e :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>w :Windows<CR>
+nnoremap <Leader>s :GFiles?<CR>
+nnoremap <Leader>c :Commits<CR>
+nnoremap <Leader>h :Helptags<CR>
 
 " disable highlight after searching
 nnoremap <Esc><Esc> :nohlsearch<CR>
@@ -44,3 +44,6 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 set autowrite
 
 set smarttab
+
+set list
+set listchars=tab:<->
