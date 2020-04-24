@@ -2,6 +2,9 @@ window:
   dimensions:
     columns: 85
     lines: 48
+background_opacity: 0.9
+cursor:
+  style: Beam
 font:
   size: 16
 shell:
