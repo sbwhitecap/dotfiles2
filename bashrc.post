@@ -2,3 +2,8 @@
 
 source $HOME/dotfiles2/aliases
 
+hilite() {
+  for namestr in "$@"; do
+    /usr/bin/src-hilite-lesspipe.sh "$namestr" | less -R
+  done
+}
