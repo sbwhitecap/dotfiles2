@@ -42,6 +42,14 @@ nnoremap <Leader>h :Helptags<CR>
 " disable highlight after searching
 nnoremap <Esc><Esc> :nohlsearch<CR>
 
+" Open temporary file
+" https://nanasi.jp/articles/howto/file/workingfile.html
+command! Scratch :new `=tempname()`
+command! VScratch :vnew `=tempname()`
+command! ScratchLisp :new `=printf("%s.lisp", tempname())`
+command! VScratchLisp :vnew `=printf("%s.lisp", tempname())`
+let $TODAY = strftime('%Y%m%d')
+
 " autosave
 set autowrite
 
