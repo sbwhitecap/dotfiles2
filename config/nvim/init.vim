@@ -18,6 +18,8 @@ call plug#begin(s:plugged)
     let g:vlime_cl_impl = 'ccl'
     let g:vlime_compiler_policy = {'DEBUG': 3, 'SPEED': 0}
   Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
+  Plug 'luochen1990/rainbow'
+    let g:rainbow_active = 1
 call plug#end()
 
 " https://postd.cc/how-to-boost-your-vim-productivity/
