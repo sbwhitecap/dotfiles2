@@ -3,10 +3,8 @@ window:
     columns: 85
     lines: 48
 background_opacity: 0.9
-cursor:
-  style: Beam
 font:
-  size: 16
+  size: 12
 shell:
   program: screen
 
