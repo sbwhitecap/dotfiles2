@@ -4,6 +4,14 @@
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 let s:plugged = s:cache_home . '/plugged'
 call plug#begin(s:plugged)
+  Plug 'tyru/eskk.vim'
+    "let g:skk_large_jisyo = expand('~/.skk-jisyo.utf8.combined')
+    let g:eskk#large_dictionary = {
+    \   'path' : expand('~/.skk-jisyo.utf8.combined'),
+    \   'sorted' : 1,
+    \   'encoding' : 'utf-8',
+    \}
+    let g:skk_egg_like_newline = 1
   Plug 'vim-jp/vimdoc-ja'
   Plug 'bronson/vim-trailing-whitespace'
 
