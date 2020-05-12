@@ -17,6 +17,11 @@ call plug#begin(s:plugged)
     let g:vlime_leader = '\'
     let g:vlime_cl_impl = 'ccl'
     let g:vlime_compiler_policy = {'DEBUG': 3, 'SPEED': 0}
+    let g:vlime_contribs = [ 'SWANK-ASDF', 'SWANK-PACKAGE-FU',
+                           \ 'SWANK-PRESENTATIONS', 'SWANK-FANCY-INSPECTOR',
+                           \ 'SWANK-C-P-C', 'SWANK-ARGLISTS', 'SWANK-REPL',
+                           \ 'SWANK-FUZZY', 'SWANK-TRACE-DIALOG']
+
   Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
   Plug 'luochen1990/rainbow'
     let g:rainbow_active = 1
