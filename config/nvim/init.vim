@@ -14,7 +14,7 @@ call plug#begin(s:plugged)
   Plug 'airblade/vim-gitgutter'
 
   Plug 'vlime/vlime', {'rtp': 'vim/'}
-    let g:vlime_leader = ','
+    let g:vlime_leader = '\'
     let g:vlime_cl_impl = 'ccl'
     let g:vlime_compiler_policy = {'DEBUG': 3, 'SPEED': 0}
   Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
