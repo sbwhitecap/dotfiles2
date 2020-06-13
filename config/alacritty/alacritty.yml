@@ -1,38 +1,56 @@
+# vim: set ts=2 sw=2 et :
 window:
   dimensions:
     columns: 85
     lines: 48
 background_opacity: 0.9
 font:
-  size: 12
+  size: 18
+
+  normal:
+    family: Source Han Code JP
+    style: Regular
+
+  bold:
+    family: Source Han Code JP
+    style: Bold
+
+  italic:
+    family: Source Han Code JP
+  style: Italic
+
+  bold_italic:
+    family: Source Han Code JP
+    style: Bold Italic
+
 shell:
   program: screen
 
-# Colors (Dracula)
+# Colors (Blood Moon)
 colors:
   # Default colors
   primary:
-    background: '0x282a36'
-    foreground: '0xf8f8f2'
+    background: '#10100E'
+    foreground: '#C6C6C4'
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xcaa9fa'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xbfbfbf'
+    black:   '#10100E'
+    red:     '#C40233'
+    green:   '#009F6B'
+    yellow:  '#FFD700'
+    blue:    '#0087BD'
+    magenta: '#9A4EAE'
+    cyan:    '#20B2AA'
+    white:   '#C6C6C4'
 
   # Bright colors
   bright:
-    black:   '0x575b70'
-    red:     '0xff6e67'
-    green:   '0x5af78e'
-    yellow:  '0xf4f99d'
-    blue:    '0xcaa9fa'
-    magenta: '0xff92d0'
-    cyan:    '0x9aedfe'
-    white:   '0xe6e6e6'
+    black:   '#696969'
+    red:     '#FF2400'
+    green:   '#03C03C'
+    yellow:  '#FDFF00'
+    blue:    '#007FFF'
+    magenta: '#FF1493'
+    cyan:    '#00CCCC'
+    white:   '#FFFAFA'
