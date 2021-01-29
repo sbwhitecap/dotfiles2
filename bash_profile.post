@@ -8,6 +8,6 @@ function _update_ps1() {
   PS1="$($(go env GOPATH)/bin/powerline-go -error $?)"
 }
 
-if [ "$TERM" != "linux" ] && [ -f "$(go env GOPATH)/bin/powerline-go" ]; then
+if [ "$TERM" != "linux" ] && which go >/dev/null 2>&1 && [ -f "$(go env GOPATH)/bin/powerline-go" ]; then
   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
