@@ -1,0 +1,12 @@
+#!/bin/sh
+# require unzip-iconv
+#set -vx
+charenc_from='cp932'
+unzip_iconv="$HOME/bin/unzip-iconv"
+[ -L "$unzip_iconv" ] || ln -s /usr/bin/unzip "$unzip_iconv"
+args=( "$@" )
+if [ '-Z' = "${args[0]}" ]; then
+    "$unzip_iconv" -Z -O "${charenc_from}" "${args[@]:1}"
+else
+    "$unzip_iconv" -O "${charenc_from}" "${args[@]}"
+fi
