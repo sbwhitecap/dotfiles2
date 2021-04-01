@@ -51,6 +51,8 @@ call plug#begin(s:plugged)
     "autocmd FileType qf nnoremap <silent><buffer>q :quit<CR>
 call plug#end()
 
+filetype plugin indent on
+
 " https://postd.cc/how-to-boost-your-vim-productivity/
 let mapleader = "\<Space>"
 vnoremap <silent> y y`]
@@ -86,3 +88,14 @@ set smarttab
 
 set list
 set listchars=tab:<->
+
+" https://lemniscus.hatenablog.com/entry/20120409/1333942456
+autocmd FileType scheme setlocal showmatch
+autocmd FileType scheme setlocal foldcolumn=4
+autocmd FileType scheme setlocal autoindent
+autocmd FileType scheme setlocal smartindent
+autocmd FileType scheme setlocal tabstop=2
+autocmd FileType scheme setlocal shiftwidth=2
+autocmd FileType scheme setlocal expandtab
+autocmd FileType scheme nnoremap <buffer> ,c vab%<ESC>i#\|<ESC>%a\|#<ESC>``l
+autocmd FileType scheme nnoremap <buffer> <silent> \ ,C ?#\|<ESC>/(<ESC>vab<ESC>/\|#<ESC>xx`<?#\|<ESC>xx
